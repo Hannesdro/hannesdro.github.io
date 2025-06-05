@@ -33,6 +33,19 @@ header {
   min-width: 200px;
 }
 
+.quote-box {
+  text-align: center;
+  margin: 0.5rem auto 0.5rem;
+  max-width: 600px;
+  font-style: Monospace;
+  color: #777;
+}
+
+.quote {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
 .profile-pic {
   width: 150px;
   height: 150px;
