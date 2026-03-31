@@ -21,8 +21,9 @@
           <br>Freie Universität Berlin (FU)</p>
           <nav>
             <a href="#research">Research</a>
-            <a href="CV>">CV</a>
+            <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
+            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
           </nav>
         </div>
       </div>
@@ -42,7 +43,7 @@
         structural and biophysical information and employ molecular simulations to capture the dynamic conformations
         and interactions of proteins. Ultimately, my goal is to develop automated, AI-assisted approaches to map
         molecular complexes in human cells, providing insights into cellular organization, molecular networks,
-        and the structural basis of disease.
+        and help people with my research.
 
       </p>
     </section>
@@ -74,5 +75,22 @@
       <p>© 2025 Hannes Drobek</p>
     </footer>
   </div>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark');
+    }
+
+    themeToggle.textContent = document.body.classList.contains('dark') ? 'Light mode' : 'Dark mode';
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+    });
+  </script>
 </body>
 </html>
