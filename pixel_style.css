@@ -120,7 +120,7 @@ footer {
 .runner-lane {
   --run-duration: 15s;
   --runner-size: 30px;
-  --runner-overshoot: 18px;
+  --runner-overshoot: 60px;
   position: absolute;
   left: 0;
   right: 0;
@@ -147,7 +147,7 @@ footer {
 .frisbee-gif {
   --frisbee-size: 15px;
   --sprite-size: var(--frisbee-size);
-  --lead-start: 52px;
+  --lead-start: 40px;
   --lead-end: 15px;
   width: var(--frisbee-size);
   top: 5px;
