@@ -108,9 +108,68 @@ h1, h2 {
 }
 
 footer {
+  position: relative;
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
   color: var(--muted);
   border-top: 2px solid var(--border);
+}
+
+/* Lane constrained to the footer divider width */
+.runner-lane {
+  --run-duration: 15s;
+  --runner-size: 30px;
+  --runner-overshoot: 18px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -28px;
+  height: 38px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.runner-gif,
+.frisbee-gif {
+  height: auto;
+  position: absolute;
+}
+
+.runner-gif {
+  --sprite-size: var(--runner-size);
+  width: var(--runner-size);
+  left: calc(-1 * (var(--sprite-size) + var(--runner-overshoot)));
+  animation: run-runner var(--run-duration) linear infinite;
+}
+
+.frisbee-gif {
+  --frisbee-size: 15px;
+  --sprite-size: var(--frisbee-size);
+  --lead-start: 52px;
+  --lead-end: 15px;
+  width: var(--frisbee-size);
+  top: 5px;
+  left: calc(-1 * (var(--sprite-size) + var(--runner-overshoot)) + var(--lead-start));
+  animation: run-frisbee var(--run-duration) linear infinite;
+  z-index: 3;
+}
+
+@keyframes run-runner {
+  from {
+    left: calc(-1 * (var(--sprite-size) + var(--runner-overshoot)));
+  }
+  to {
+    left: calc(100% + var(--runner-overshoot));
+  }
+}
+
+@keyframes run-frisbee {
+  from {
+    left: calc(-1 * (var(--sprite-size) + var(--runner-overshoot)) + var(--lead-start));
+  }
+  to {
+    left: calc(100% + var(--runner-overshoot) + var(--lead-end));
+  }
 }
