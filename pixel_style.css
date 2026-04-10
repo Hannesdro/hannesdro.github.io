@@ -102,6 +102,25 @@ section {
   margin-top: 2rem;
 }
 
+.cv-list {
+  display: grid;
+  grid-template-columns: 120px 120px 1fr;
+  column-gap: 1.0rem;
+  row-gap: 0.35rem;
+}
+
+.cv-year {
+  font-weight: bold;
+}
+
+.cv-location {
+  font-weight: left;
+}
+
+.cv-item {
+  text-align: left;
+}
+
 h1, h2 {
   color: var(--link);
   font-family: "Quantico", sans-serif;
