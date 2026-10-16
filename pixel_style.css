@@ -17,7 +17,8 @@ body.dark {
 }
 
 body {
-  font-family: Monospace;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
   line-height: 1.6;
   background-color: var(--bg);
   margin: 0;
@@ -72,6 +73,10 @@ header {
   object-position: center;
 }
 
+a {
+  color: var(--link);
+}
+
 nav a {
   margin: 0 0.5rem;
   text-decoration: none;
@@ -89,7 +94,7 @@ nav button {
   border-radius: 4px;
   background: var(--surface);
   color: var(--text);
-  font-family: Monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 0.8rem;
   cursor: pointer;
 }
@@ -99,7 +104,26 @@ nav button:hover {
 }
 
 section {
-  margin-top: 2rem;
+  margin-top: 1.25rem;
+}
+
+.cv-download {
+  margin-top: 1rem;
+}
+
+.cv-download a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.cv-download a:hover {
+  text-decoration: underline;
+}
+
+.cv-download .cv-date {
+  color: var(--muted);
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .cv-list {
@@ -123,7 +147,14 @@ section {
 
 h1, h2 {
   color: var(--link);
-  font-family: "Quantico", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  margin-top: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+h1 + p,
+h2 + p {
+  margin-top: 0;
 }
 
 footer {
